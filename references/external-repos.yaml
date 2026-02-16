@@ -1,0 +1,47 @@
+# External Repository Information
+# 医学影像生成相关的外部仓库信息
+
+repositories:
+  rectified_flow:
+    name: "RectifiedFlow"
+    owner: "@gnobitab"
+    url: "https://github.com/gnobitab/RectifiedFlow"
+    stars: 1547
+    paper: "ICLR 2023 Spotlight"
+    key_feature: "单步生成，直线路径"
+    install: "git clone https://github.com/gnobitab/RectifiedFlow.git"
+    applicable:
+      - "实时医学影像生成"
+      - "MRI/CT跨模态合成"
+      - "低剂量CT去噪"
+
+  monai_generative:
+    name: "MONAI GenerativeModels"
+    owner: "@Project-MONAI"
+    url: "https://github.com/Project-MONAI/GenerativeModels"
+    stars: 740
+    key_feature: "医学影像专用，生态完善"
+    install: "pip install monai-generative"
+    applicable:
+      - "高质量医学影像生成"
+      - "条件控制生成 (ControlNet)"
+      - "潜在空间训练 (Latent Diffusion)"
+
+  consistency_models:
+    name: "consistency_models"
+    owner: "@openai"
+    url: "https://github.com/openai/consistency_models"
+    stars: 6476
+    paper: "ICML 2023"
+    key_feature: "单步最快，从Diffusion蒸馏"
+    install: "git clone https://github.com/openai/consistency_models.git"
+    applicable:
+      - "超实时应用"
+      - "边缘设备部署"
+
+# 快速选择指南
+selection_guide:
+  "实时推理": "rectified_flow"
+  "最高质量": "monai_generative"
+  "超快超分": "consistency_models"
+  "条件控制": "monai_generative"
